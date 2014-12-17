@@ -1,0 +1,55 @@
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\ZPP - frontend.dll.config
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\ZPP - frontend.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\ZPP - frontend.pdb
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Antlr3.Runtime.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\EntityFramework.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\EntityFramework.SqlServer.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Newtonsoft.Json.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Owin.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Helpers.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Mvc.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Optimization.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Razor.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.WebPages.Deployment.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.WebPages.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.WebPages.Razor.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\WebGrease.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Helpers.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Mvc.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Optimization.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.Razor.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.WebPages.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.WebPages.Deployment.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\System.Web.WebPages.Razor.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Antlr3.Runtime.pdb
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Newtonsoft.Json.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\EntityFramework.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\EntityFramework.SqlServer.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\obj\Release\ZPP - frontend.csprojResolveAssemblyReference.cache
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\obj\Release\ZPP - frontend.dll
+C:\Users\asdf\Documents\Visual Studio 2013\Projects\frontend\ZPP - frontend\obj\Release\ZPP - frontend.pdb

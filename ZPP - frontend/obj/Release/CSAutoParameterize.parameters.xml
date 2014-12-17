@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=&quot;|DataDirectory|\aspnet-ZPP - frontend-20141209072154.mdf&quot;;Initial Catalog=&quot;aspnet-ZPP - frontend-20141209072154&quot;;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\asdf\\Documents\\Visual\ Studio\ 2013\\Projects\\frontend\\ZPP\ -\ frontend\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
