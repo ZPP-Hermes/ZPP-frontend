@@ -60,47 +60,8 @@ namespace ZPP___frontend.Controllers
         public ActionResult HandlePredictedMarks(int Ocena1, int Ocena2, int Ocena3, 
             int Ocena4, int Ocena5, int Ocena6, int Ocena7, int Ocena8, int Ocena9, int Ocena10)
         {
-            string connection = "Data Source=zpptestvm.cloudapp.net;Initial Catalog=Test2;" +
+            string connection = "Data Source=zpptestvm.cloudapp.net;Database=Test2;" +
             "User ID=admin;Password=admin;";
-            /*string queryString = @"
-            SELECT FLATTENED
-              Predict ([Student].[Przedmiot], INCLUDE_STATISTICS)
-            From
-              [Student]
-            NATURAL PREDICTION JOIN
-            (SELECT (SELECT 1 AS [Przedmiot ID],
-              @Ocena1 AS [Ocena]
-              UNION SELECT 2 AS [Przedmiot ID],
-              @Ocena2 AS [Ocena]
-              UNION SELECT 3 AS [Przedmiot ID],
-              @Ocena3 AS [Ocena]
-              UNION SELECT 4 AS [Przedmiot ID],
-              @Ocena4 AS [Ocena]
-              UNION SELECT 5 AS [Przedmiot ID],
-              @Ocena5 AS [Ocena]
-              UNION SELECT 6 AS [Przedmiot ID],
-              @Ocena6 AS [Ocena]
-              UNION SELECT 7 AS [Przedmiot ID],
-              @Ocena7 AS [Ocena]
-              UNION SELECT 8 AS [Przedmiot ID],
-              @Ocena8 AS [Ocena]
-              UNION SELECT 9 AS [Przedmiot ID],
-              @Ocena9 AS [Ocena]
-              UNION SELECT 10 AS [Przedmiot ID],
-              @Ocena10 AS [Ocena]) AS [Przedmiot]) AS t";
-
-            connection.ConnectionString = connectionString;
-            connection.Open();
-            AdomdCommand cmd = new AdomdCommand(queryString);
-            cmd.Connection = connection;
-            ArrayList<int> predictedMarks = new ArrayList<int>();
-            using (var reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    predictedMarks.add(reader[0].ToInt32());
-                }
-            }*/
             SqlConnection conn = new SqlConnection(connection);
             ArrayList predictedMarks = new ArrayList();
             try
@@ -115,12 +76,12 @@ namespace ZPP___frontend.Controllers
             try
             {
               SqlDataReader myReader = null;
-              SqlCommand query = new SqlCommand("SELECT * FROM OPENQUERY(DMServer, 'SELECT FLATTENED Predict ([Student].[Przedmiot], INCLUDE_STATISTICS) From [Student] NATURAL PREDICTION JOIN(SELECT (SELECT 1 AS [Przedmiot ID], @Ocena1 AS [Ocena] UNION SELECT 2 AS [Przedmiot ID], @Ocena2 AS [Ocena] UNION SELECT 3 AS [Przedmiot ID],@Ocena3 AS [Ocena]UNION SELECT 4 AS [Przedmiot ID],@Ocena4 AS [Ocena]UNION SELECT 5 AS [Przedmiot ID],@Ocena5 AS [Ocena]UNION SELECT 6 AS [Przedmiot ID],@Ocena6 AS [Ocena]UNION SELECT 7 AS [Przedmiot ID],@Ocena7 AS [Ocena]UNION SELECT 8 AS [Przedmiot ID],@Ocena8 AS [Ocena]UNION SELECT 9 AS [Przedmiot ID],@Ocena9 AS [Ocena]UNION SELECT 10 AS [Przedmiot ID],@Ocena10 AS [Ocena]) AS [Przedmiot]) AS t')", conn);
+              SqlCommand query = new SqlCommand("SELECT * FROM OPENQUERY(DMServer, 'SELECT FLATTENED Predict ([Student].[Przedmiot], INCLUDE_STATISTICS) From [Student] NATURAL PREDICTION JOIN(SELECT (SELECT 1 AS [Przedmiot ID], "+Ocena1+" AS [Ocena] UNION SELECT 2 AS [Przedmiot ID], "+Ocena2+" AS [Ocena] UNION SELECT 3 AS [Przedmiot ID],"+Ocena3+" AS [Ocena]UNION SELECT 4 AS [Przedmiot ID],"+Ocena4+" AS [Ocena]UNION SELECT 5 AS [Przedmiot ID],"+Ocena5+" AS [Ocena]UNION SELECT 6 AS [Przedmiot ID],"+Ocena6+" AS [Ocena]UNION SELECT 7 AS [Przedmiot ID],"+Ocena7+" AS [Ocena]UNION SELECT 8 AS [Przedmiot ID],"+Ocena8+" AS [Ocena]UNION SELECT 9 AS [Przedmiot ID],"+Ocena9+" AS [Ocena]UNION SELECT 10 AS [Przedmiot ID],"+Ocena10+" AS [Ocena]) AS [Przedmiot]) AS t')", conn);
               myReader = query.ExecuteReader();
               while (myReader.Read())
               {
 
-                  predictedMarks.Add(Convert.ToInt32(myReader[0]));
+                  predictedMarks.Add(Convert.ToInt32(myReader[1]));
               }
             }
             catch (Exception e)
@@ -130,7 +91,7 @@ namespace ZPP___frontend.Controllers
             }
 
 
-            if (predictedMarks.Count == 5)
+            if (predictedMarks.Count > 0)
             {
                 ViewData["przedmiot1"] = predictedMarks[0];
                 ViewData["przedmiot2"] = predictedMarks[1];
