@@ -6,7 +6,7 @@ using System.Collections;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.OleDb;
-//using Microsoft.AnalisysServices.AdomdClient;
+//using Microsoft.AnalyssServices.AdomdClient;
 
 namespace ZPP___frontend.Controllers
 {
@@ -51,7 +51,7 @@ namespace ZPP___frontend.Controllers
             ViewBag.Ocena8 = marks;
             ViewBag.Ocena9 = marks;
             ViewBag.Ocena10 = marks;
-
+            
             return View();
         }
 
@@ -70,7 +70,7 @@ namespace ZPP___frontend.Controllers
             }
             catch(Exception)
             {
-              ViewData["error"] = "Database error contact administrator";
+              ViewData["Error"] = "Database error contact administrator";
                 return View("Error");
             }
             try
@@ -86,7 +86,7 @@ namespace ZPP___frontend.Controllers
             }
             catch (Exception e)
             {
-                ViewData["error"] = e.ToString();
+                ViewData["Error"] = e.ToString();
                 return View("Error");
             }
 
@@ -102,7 +102,7 @@ namespace ZPP___frontend.Controllers
             }
             else
             {
-                ViewData["error"] = "błąd bazy danych";
+                ViewData["Error"] = "błąd bazy danych";
                 return View("Error");
             }
 
