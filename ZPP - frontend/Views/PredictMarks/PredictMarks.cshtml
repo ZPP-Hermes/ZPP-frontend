@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Przewiduj Oceny";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+
+@using (Html.BeginForm("HandlePredictedMarks", "PredictMarks"))
+{
+
+    <div class="form-group">
+        <label for="inputUserName">Analiza 1</label>
+        @Html.DropDownList("Ocena1")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Analiza 2</label>
+        @Html.DropDownList("Ocena2")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Wstęp do programowania</label>
+        @Html.DropDownList("Ocena3")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Inżynieria oprogramowania</label>
+        @Html.DropDownList("Ocena4")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Programowanie obiektowe</label>
+        @Html.DropDownList("Ocena5")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Systemy operacyjne</label>
+        @Html.DropDownList("Ocena6")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Bazy danych</label>
+        @Html.DropDownList("Ocena7")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Algorytmy i struktury danych</label>
+        @Html.DropDownList("Ocena8")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Aplikacje WWW</label>
+        @Html.DropDownList("Ocena9")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Sieci komputerowe</label>
+        @Html.DropDownList("Ocena10")
+    </div>
+    <p>
+        <button type="button" class="btn btn-primary btn-lg" 
+                onclick="location.href='@Url.Action("GetMarksFromDatabase", "PredictMarks")'">importuj oceny z usosa</button>
+    </p>
+
+    <p>
+
+            <input type="submit" class="btn btn-default" value="przewiduj oceny" />
+
+        </p>
+
+}

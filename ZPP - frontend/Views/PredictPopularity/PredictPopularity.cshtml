@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Przewiduj przedmioty";
+}
+<h2>@ViewBag.Title.</h2>
+
+@using (Html.BeginForm("HandlePopularity", "PredictPopularity"))
+{
+    <div class="form-group">
+        <label for="inputUserName">Analiza 1</label>
+        @Html.TextBox("subject")
+    </div>
+
+    <div class="form-group">
+        <label for="inputUserName">Analiza 2</label>
+        @Html.TextBox("teacher")
+    </div>
+
+    <p>
+
+        <input type="submit" class="btn btn-default" value="przewiduj popularność" />
+
+    </p>
+}

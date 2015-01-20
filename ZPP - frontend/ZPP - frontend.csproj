@@ -158,9 +158,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Content\Controllers\AccountController.cs" />
+    <Compile Include="Content\Controllers\HomeController.cs" />
+    <Compile Include="Content\Controllers\PredictMarksController.cs" />
+    <Compile Include="Content\Controllers\ManageController.cs" />
+    <Compile Include="Content\Controllers\PredictPopularityController.cs" />
+    <Compile Include="Content\DBConnector.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -205,7 +208,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
-    <Content Include="Views\Home\PredictSubjects.cshtml" />
+    <Content Include="Views\PredictPopularity\PredictPopularity.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -228,8 +231,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\PredictMarksResults.cshtml" />
-    <Content Include="Views\Home\PredictMarks.cshtml" />
+    <Content Include="Views\PredictMarks\PredictMarksResults.cshtml" />
+    <Content Include="Views\PredictMarks\PredictMarks.cshtml" />
+    <Content Include="Views\PredictPopularity\PredictPopularityResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
