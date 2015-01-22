@@ -13,6 +13,7 @@ using DotNetOpenAuth.AspNet.Clients;
 using System.Collections.Generic;
 using ZPP___frontend.Content;
 
+
 namespace ZPP___frontend.Content.Controllers
 {
     public class OAuthController : Controller
@@ -38,10 +39,16 @@ namespace ZPP___frontend.Content.Controllers
                                 };
             return mimuw;
         }
-        private int Process()
-        {
-            return 0;
-        }
+        private string[] terms = {
+                                     //"2013L",
+                                     //"2013Z",
+                                     "2012L",
+                                     "2012Z",
+                                     //"2011L",
+                                     //"2011Z",
+                                     //"2010L",
+                                     //"2010Z",
+                                 };
 
         // GET: OAuth
         public ActionResult Index()
@@ -57,24 +64,37 @@ namespace ZPP___frontend.Content.Controllers
         {
             prepareConsumer();
             MessageReceivingEndpoint endp = new MessageReceivingEndpoint("https://usosapps.uw.edu.pl/services/grades/course_edition", HttpDeliveryMethods.GetRequest);
-            MessageReceivingEndpoint endp2 = new MessageReceivingEndpoint("https://usosapps.uw.edu.pl/services/grades/course_edition", HttpDeliveryMethods.GetRequest);
-            IDictionary<string,string> requestData = new Dictionary<string,string>();
-            requestData.Add("term_id", "2012Z");
-            requestData.Add("fields", "value_symbol");
-            requestData.Add("course_id", "1000-211bPM");
-            var requestData2 = new Dictionary<string,string>(requestData);
-            requestData2["course_id"] = "1000-212bMD";
-            requestData2["term_id"]="2012L";
+            var requestDataTemplate = new Dictionary<string,string>{{"fields", "value_symbol"}};
             string accessToken = webConsumer.ProcessUserAuthorization().AccessToken;
-            ViewData["token"] = accessToken;
-            ///webConsumer.PrepareAuthorizedRequest(,)
-            var request = webConsumer.PrepareAuthorizedRequest(endp, accessToken,requestData);
-            var request2 = webConsumer.PrepareAuthorizedRequest(endp2, accessToken, requestData2);
-            var response = request.GetResponse();
-            var response2 = request2.GetResponse();
-            ViewData["res"] = (new System.IO.StreamReader(response.GetResponseStream())).ReadToEnd();
-            ViewData["res2"] = (new System.IO.StreamReader(response2.GetResponseStream())).ReadToEnd();
- 
+            var res = new Dictionary<string, Mark>();
+            foreach (KeyValuePair<string, string> x in Mark.nameMap) {
+                foreach(string y in terms) {
+                    if (res.ContainsKey(x.Key)) break;
+                    var requestData = new Dictionary<string, string> (requestDataTemplate);
+                    requestData.Add("term_id", y);
+                    requestData.Add("course_id", x.Value);
+                    var request = webConsumer.PrepareAuthorizedRequest(endp, accessToken,requestData);
+                    System.Net.WebResponse response;
+                    //try {
+                        response = request.GetResponse();
+                        
+                    //} catch (Exception e){
+                    //    continue;
+                    //}
+
+                    string json = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+                    var parsed = ResponseParser.ParseCourseEdition(json);
+                    if (parsed == null)
+                        continue;
+                    res.Add(x.Key, new Mark(x.Key, Mark.Convert(parsed)));
+                    break;
+                }
+                break;
+            }
+
+
+            ViewData["res"] = res["Ocena1"].value;
+
             return View();
         }
     }

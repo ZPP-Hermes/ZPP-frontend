@@ -84,7 +84,7 @@ namespace ZPP___frontend.Controllers
             ArrayList predictedMarks = new ArrayList(new[] {4, 6, 7, 8, 11});
             try
             {
-              /* TODO -> new query
+             
               SqlDataReader myReader = null;
               SqlCommand query = new SqlCommand("SELECT * FROM OPENQUERY(DMServer, 'SELECT FLATTENED Predict ([Student].[Przedmiot], INCLUDE_STATISTICS) From [Student] NATURAL PREDICTION JOIN(SELECT (SELECT 1 AS [Przedmiot ID], "+Ocena1+" AS [Ocena] UNION SELECT 2 AS [Przedmiot ID], "+Ocena2+" AS [Ocena] UNION SELECT 3 AS [Przedmiot ID],"+Ocena3+" AS [Ocena]UNION SELECT 4 AS [Przedmiot ID],"+Ocena4+" AS [Ocena]UNION SELECT 5 AS [Przedmiot ID],"+Ocena5+" AS [Ocena]UNION SELECT 6 AS [Przedmiot ID],"+Ocena6+" AS [Ocena]UNION SELECT 7 AS [Przedmiot ID],"+Ocena7+" AS [Ocena]UNION SELECT 8 AS [Przedmiot ID],"+Ocena8+" AS [Ocena]UNION SELECT 9 AS [Przedmiot ID],"+Ocena9+" AS [Ocena]UNION SELECT 10 AS [Przedmiot ID],"+Ocena10+" AS [Ocena]) AS [Przedmiot]) AS t')", conn);
               myReader = query.ExecuteReader();
@@ -92,7 +92,7 @@ namespace ZPP___frontend.Controllers
               {
 
                   predictedMarks.Add(Convert.ToInt32(myReader[1]));
-              }*/
+              }
             }
             catch (Exception e)
             {
@@ -100,7 +100,7 @@ namespace ZPP___frontend.Controllers
                 return View("Error");
             }
 
-            /////////////////////////////////// displaying a data /////////////////////////////
+            /////////////////////////////////// displaying data /////////////////////////////
 
             if (predictedMarks.Count > 0)
             {
