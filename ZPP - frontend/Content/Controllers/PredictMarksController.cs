@@ -70,7 +70,8 @@ namespace ZPP___frontend.Controllers
         }
 
 
-        public ActionResult PredictAndShowMarks(FormCollection formData)
+        public ActionResult PredictAndShowMarks(int Ocena1, int Ocena2,
+        int Ocena3, int Ocena4, int Ocena5, int OCena6, int Ocena7, int Ocena8, int Ocena9, int Ocena10)
         {
 
             //////////////////////////////////// connecting to database ////////////////////////
