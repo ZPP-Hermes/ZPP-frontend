@@ -53,7 +53,7 @@ namespace ZPP___frontend.Controllers
                 SelectedSubject1 = "BD",
                 SelectedSubject2 = "ASD",
                 SelectedSubject3 = "SI",
-                SelectedMark1 = "4",
+                SelectedMark1 = 8,
                 SubjectsList = _subjectList,
                 MarksList = _marksList
             };
@@ -70,9 +70,7 @@ namespace ZPP___frontend.Controllers
         }
 
 
-        public ActionResult PredictAndShowMarks(int Ocena1, int Ocena2,
-            int Ocena3, int Ocena4, int Ocena5, int Ocena6,
-            int Ocena7, int Ocena8, int Ocena9, int Ocena10)
+        public ActionResult PredictAndShowMarks(SubjectModel model)
         {
 
             //////////////////////////////////// connecting to database ////////////////////////
@@ -97,7 +95,7 @@ namespace ZPP___frontend.Controllers
             {
                 //
                 SqlDataReader myReader = null;
-                SqlCommand query = new SqlCommand("SELECT * FROM OPENQUERY(DMSERVER, 'SELECT FLATTENED Predict ([Student].[Przedmiot], INCLUDE_STATISTICS) From [Student] NATURAL PREDICTION JOIN(SELECT (SELECT 1 AS [Przedmiot ID], "+Ocena1+" AS [Ocena] UNION SELECT 2 AS [Przedmiot ID], "+Ocena2+" AS [Ocena] UNION SELECT 3 AS [Przedmiot ID],"+Ocena3+" AS [Ocena]UNION SELECT 4 AS [Przedmiot ID],"+Ocena4+" AS [Ocena]UNION SELECT 5 AS [Przedmiot ID],"+Ocena5+" AS [Ocena]UNION SELECT 6 AS [Przedmiot ID],"+Ocena6+" AS [Ocena]UNION SELECT 7 AS [Przedmiot ID],"+Ocena7+" AS [Ocena]UNION SELECT 8 AS [Przedmiot ID],"+Ocena8+" AS [Ocena]UNION SELECT 9 AS [Przedmiot ID],"+Ocena9+" AS [Ocena]UNION SELECT 10 AS [Przedmiot ID],"+Ocena10+" AS [Ocena]) AS [Przedmiot]) AS t')", conn);
+                SqlCommand query = new SqlCommand("SELECT * FROM OPENQUERY(DMSERVER, 'SELECT FLATTENED Predict ([Student].[Przedmiot], INCLUDE_STATISTICS) From [Student] NATURAL PREDICTION JOIN(SELECT (SELECT 1 AS [Przedmiot ID], "+model.SelectedMark1+" AS [Ocena] UNION SELECT 2 AS [Przedmiot ID], "+model.SelectedMark2+" AS [Ocena] UNION SELECT 3 AS [Przedmiot ID],"+model.SelectedMark3+" AS [Ocena]UNION SELECT 4 AS [Przedmiot ID],"+model.SelectedMark4+" AS [Ocena]UNION SELECT 5 AS [Przedmiot ID],"+model.SelectedMark5+" AS [Ocena]UNION SELECT 6 AS [Przedmiot ID],"+model.SelectedMark6+" AS [Ocena]UNION SELECT 7 AS [Przedmiot ID],"+model.SelectedMark7+" AS [Ocena]UNION SELECT 8 AS [Przedmiot ID],"+model.SelectedMark8+" AS [Ocena]UNION SELECT 9 AS [Przedmiot ID],"+model.SelectedMark9+" AS [Ocena]UNION SELECT 10 AS [Przedmiot ID],"+model.SelectedMark10+" AS [Ocena]) AS [Przedmiot]) AS t')", conn);
                 myReader = query.ExecuteReader();
                 while (myReader.Read())
                 {
@@ -130,7 +128,7 @@ namespace ZPP___frontend.Controllers
         }
 
 
-        private SubjectModel GetModelFromDictionary(Dictionary<String, String> data)
+        private SubjectModel GetModelFromDictionary(Dictionary<String, int> data)
         {
             SubjectModel Model = new SubjectModel
             {

@@ -19,16 +19,16 @@ namespace ZPP___frontend.Models
         public String SelectedSubject8 { get; set; }
         public String SelectedSubject9 { get; set; }
         public String SelectedSubject10 { get; set; }
-        public String SelectedMark1 { get; set; }
-        public String SelectedMark2 { get; set; }
-        public String SelectedMark3 { get; set; }
-        public String SelectedMark4 { get; set; }
-        public String SelectedMark5 { get; set; }
-        public String SelectedMark6 { get; set; }
-        public String SelectedMark7 { get; set; }
-        public String SelectedMark8 { get; set; }
-        public String SelectedMark9 { get; set; }
-        public String SelectedMark10 { get; set; }
+        public int SelectedMark1 { get; set; }
+        public int SelectedMark2 { get; set; }
+        public int SelectedMark3 { get; set; }
+        public int SelectedMark4 { get; set; }
+        public int SelectedMark5 { get; set; }
+        public int SelectedMark6 { get; set; }
+        public int SelectedMark7 { get; set; }
+        public int SelectedMark8 { get; set; }
+        public int SelectedMark9 { get; set; }
+        public int SelectedMark10 { get; set; }
         public List<SelectListItem> SubjectsList { get; set; }
         public List<SelectListItem> MarksList { get; set; }
     }
