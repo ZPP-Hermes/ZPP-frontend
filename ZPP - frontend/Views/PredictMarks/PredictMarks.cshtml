@@ -1,72 +1,156 @@
 ﻿@{
-    ViewBag.Title = "Przewiduj Oceny";
+    ViewBag.Title = "Wpisz oceny ze swoich przedmiotów lub zaimportuj dane z usosa";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
 
 
+@model ZPP___frontend.Models.SubjectModel
 
-@using (Html.BeginForm("HandlePredictedMarks", "PredictMarks"))
+@using (Html.BeginForm("PredictAndShowMarks", "PredictMarks"))
 {
 
     <div class="form-group">
-        <label for="inputUserName">Analiza 1</label>
-        @Html.DropDownList("Ocena1")
+        <label for="inputUserName">Przedmiot 1</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject1,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 1</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark1,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Analiza 2</label>
-        @Html.DropDownList("Ocena2")
+        <label for="inputUserName">Przedmiot 2</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject2,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 2</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark2,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Wstęp do programowania</label>
-        @Html.DropDownList("Ocena3")
+        <label for="inputUserName">Przedmiot 3</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject3,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 3</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark3,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Inżynieria oprogramowania</label>
-        @Html.DropDownList("Ocena4")
+        <label for="inputUserName">Przedmiot 4</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject4,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 4</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark4,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Programowanie obiektowe</label>
-        @Html.DropDownList("Ocena5")
+        <label for="inputUserName">Przedmiot 5</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject5,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 5</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark5,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Systemy operacyjne</label>
-        @Html.DropDownList("Ocena6")
+        <label for="inputUserName">Przedmiot 6</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject6,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 6</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark6,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Bazy danych</label>
-        @Html.DropDownList("Ocena7")
+        <label for="inputUserName">Przedmiot 7</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject7,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 7</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark7,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Algorytmy i struktury danych</label>
-        @Html.DropDownList("Ocena8")
+        <label for="inputUserName">Przedmiot 8</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject8,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 8</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark8,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Aplikacje WWW</label>
-        @Html.DropDownList("Ocena9")
+        <label for="inputUserName">Przedmiot 9</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject9,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 9</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark9,
+                Model.MarksList
+            )
     </div>
 
     <div class="form-group">
-        <label for="inputUserName">Sieci komputerowe</label>
-        @Html.DropDownList("Ocena10")
+        <label for="inputUserName">Przedmiot 10</label>
+        @Html.DropDownListFor(
+                x => x.SelectedSubject10,
+                Model.SubjectsList
+            )
+        <label for="inputUserName">Ocena 10</label>
+        @Html.DropDownListFor(
+                x => x.SelectedMark10,
+                Model.MarksList
+            )
     </div>
+
+
     <p>
-        <button type="button" class="btn btn-primary btn-lg" 
-                onclick="location.href='@Url.Action("Index", "OAuth")'">importuj oceny z usosa</button>
+        <button type="button" class="btn btn-primary btn-lg"
+                onclick="location.href='@Url.Action("Index", "OAuth")'">
+            importuj oceny z usosa
+        </button>
     </p>
 
     <p>
 
-            <input type="submit" class="btn btn-default" value="przewiduj oceny" />
+        <input type="submit" class="btn btn-default" value="przewiduj oceny" />
 
-        </p>
+    </p>
 
 }
