@@ -40,12 +40,12 @@ namespace ZPP___frontend.Content.Controllers
             return mimuw;
         }
         private string[] terms = {
-                                     //"2013L",
-                                     //"2013Z",
+                                     "2013L",
+                                     "2013Z",
                                      "2012L",
                                      "2012Z",
-                                     //"2011L",
-                                     //"2011Z",
+                                     "2011L",
+                                     "2011Z",
                                      //"2010L",
                                      //"2010Z",
                                  };
@@ -87,13 +87,16 @@ namespace ZPP___frontend.Content.Controllers
                     if (parsed == null)
                         continue;
                     res.Add(x.Key, new Mark(x.Key, Mark.Convert(parsed)));
-                    break;
+                    
                 }
-                break;
+                
             }
-
-
-            ViewData["res"] = res["Ocena1"].value;
+            var bld = new System.Text.StringBuilder("");
+            foreach (KeyValuePair<string, Mark> x in res)
+            {
+                bld.Append(Mark.nameMap[x.Key] +": " +(float)x.Value.value/2.0+"\n");
+            }
+            ViewData["res"] = bld.ToString();
 
             return View();
         }
