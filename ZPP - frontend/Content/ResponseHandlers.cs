@@ -30,7 +30,7 @@ namespace ZPP___frontend.Content
         {
             var ds = JsonConvert.DeserializeObject<Response>(data);
             if (ds.course_grades == null)
-                return "2";
+                return null;
             else
             {
                 if (ds.course_grades.p3 != null)
