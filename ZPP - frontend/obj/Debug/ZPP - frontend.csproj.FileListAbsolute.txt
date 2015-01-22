@@ -163,3 +163,7 @@ C:\Users\Krzysiek\Desktop\ZPP\frontend\frontend\ZPP - frontend\bin\Microsoft.Owi
 C:\Users\Krzysiek\Desktop\ZPP\frontend\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Krzysiek\Desktop\ZPP\frontend\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Krzysiek\Desktop\ZPP\frontend\frontend\ZPP - frontend\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Krzysiek\Desktop\ZPP\frontendOAuth\ZPP-frontend\ZPP - frontend\obj\Debug\ZPP - frontend.csproj.App.config
+C:\Users\Krzysiek\Desktop\ZPP\frontendOAuth\ZPP-frontend\ZPP - frontend\obj\Debug\ZPP - frontend.csprojResolveAssemblyReference.cache
+C:\Users\Krzysiek\Desktop\ZPP\frontendOAuth\ZPP-frontend\ZPP - frontend\obj\Debug\ZPP - frontend.dll
+C:\Users\Krzysiek\Desktop\ZPP\frontendOAuth\ZPP-frontend\ZPP - frontend\obj\Debug\ZPP - frontend.pdb
