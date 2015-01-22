@@ -7,7 +7,7 @@ namespace ZPP___frontend.Content
     public class WrongMarkException : Exception { }
     public class Mark
     {
-        public string name { get; set; }
+        public string name { get; set;}
         public int value { get; set; }
         public Mark(string key, int value)
         {
@@ -44,4 +44,6 @@ namespace ZPP___frontend.Content
             {"Ocena10", "1000-214bSIK"}
         };
     }
+
 }
+
