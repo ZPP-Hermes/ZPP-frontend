@@ -96,7 +96,9 @@ namespace ZPP___frontend.Controllers
                 //
                 SqlDataReader myReader = null;
                 SqlCommand query = new SqlCommand("SELECT * FROM OPENQUERY(DMSERVER, 'SELECT FLATTENED Predict ([Student].[Przedmiot], INCLUDE_STATISTICS) From [Student] NATURAL PREDICTION JOIN(SELECT (SELECT 1 AS [Przedmiot ID], "+model.SelectedMark1+" AS [Ocena] UNION SELECT 2 AS [Przedmiot ID], "+model.SelectedMark2+" AS [Ocena] UNION SELECT 3 AS [Przedmiot ID],"+model.SelectedMark3+" AS [Ocena]UNION SELECT 4 AS [Przedmiot ID],"+model.SelectedMark4+" AS [Ocena]UNION SELECT 5 AS [Przedmiot ID],"+model.SelectedMark5+" AS [Ocena]UNION SELECT 6 AS [Przedmiot ID],"+model.SelectedMark6+" AS [Ocena]UNION SELECT 7 AS [Przedmiot ID],"+model.SelectedMark7+" AS [Ocena]UNION SELECT 8 AS [Przedmiot ID],"+model.SelectedMark8+" AS [Ocena]UNION SELECT 9 AS [Przedmiot ID],"+model.SelectedMark9+" AS [Ocena]UNION SELECT 10 AS [Przedmiot ID],"+model.SelectedMark10+" AS [Ocena]) AS [Przedmiot]) AS t')", conn);
+                //TU JEST BLAD !!!
                 myReader = query.ExecuteReader();
+                //END BLAD !!!
                 while (myReader.Read())
                 {
 
