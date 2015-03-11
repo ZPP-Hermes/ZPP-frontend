@@ -111,7 +111,7 @@ namespace ZPP___frontend.Controllers
                 return View("Error");
             }
 
-            /////////////////////////////////// displaying a data /////////////////////////////
+            /////////////////////////////////// displaying data /////////////////////////////
 
             if (predictedMarks.Count > 0)
             {
